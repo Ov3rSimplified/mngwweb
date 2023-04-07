@@ -68,7 +68,7 @@ body {
   color: white;
   font-family: 'Rubik Moonrocks';
   font-weight: bolder;
-  font-size: 120px;
+  font-size: 5rem;
   margin-top: 5%;
   margin-bottom: 9%;
   display: block;
@@ -78,7 +78,7 @@ body {
 .particles-js-canvas-el {
   position: fixed;
   top: 1;
-  bottom: 40%;
+  bottom: 0;
   z-index: -1;
 }
 
@@ -144,7 +144,7 @@ body {
   color: white;
   font-family: 'Unbounded', bold;
   text-decoration: underline;
-  font-size: 45px;
+  font-size: 2rem;
   font-weight: 10px;
   text-align: center;
   align-items: center;
@@ -153,8 +153,12 @@ body {
 .Content-1_txt {
   color: white;
   font-family: 'Montserrat', bold;
-  font-size: 10px;
+  font-size: 1rem;
   font-weight: 1px;
   text-align: center;
   display: block;
+}
+
+.Content-1_h1 {
+    background-image: linear-gradient(to right, #120324, #150a4e, #120324);
 }
