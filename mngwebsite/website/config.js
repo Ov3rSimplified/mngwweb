@@ -7,7 +7,7 @@ var Progresses = [
         'g': 255,
         'b': 255,
         },
-        Progress: 90
+        Progress: 55
     },
     { 
         Title: 'Forum',
@@ -16,7 +16,7 @@ var Progresses = [
         'g': 255,
         'b': 255,
         },
-        Progress: 40
+        Progress: 45
     },
     { 
         Title: 'Discord',
@@ -25,7 +25,7 @@ var Progresses = [
         'g': 255,
         'b': 255,
         },
-        Progress: 40
+        Progress: 80
     },
     { 
         Title: 'Sonstiges',
@@ -43,7 +43,7 @@ var Progresses = [
         'g': 255,
         'b': 255,
         },
-        Progress: 40
+        Progress: 0
     },
     { 
         Title: 'Server Scripts',
@@ -52,6 +52,6 @@ var Progresses = [
         'g': 255,
         'b': 255,
         },
-        Progress: 40
+        Progress: 10
     },
 ];
