@@ -4,6 +4,8 @@
     <mseta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="config.js"></script>
+
     <!--<script src="src/src.js"></script>-->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,66 +20,113 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <script src="src/logic.js"></script>
+
     <title>Midnight Gaming</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    
 </head>
 <body>
-    <section>
-        <nav class="navbar">
-            <!--<div class="navbar-Title" > MnG </div>-->
-            <img class="navbar-logo" src="img/test.png" style="width: 48px; height: 48px;"></<img>
-            <a href="#" class="navbar-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </a>
-            <div class="navbar-links">
-                <ul> 
-                    <li><a href="https://discord.gg/jHXbBDHYXG"></img>Discord</a></li>
-                    <li><a href="#H">Forum</a></li>
-                    <!--<li><a href="#">Home</a></li>-->
-                </ul>
-            </div>
-            <script src="src/logic.js"></script>
-        </nav>
-        <!--<div class="navbar">
-            <ul class="navbar_ul">
-                <li class="navbar_li"><img src="img/test.png" style="width: 48px; height: 48px;"></<img></li>
-                <li class="navbar_li"><a class="navbar_a" href="" onclick="alert('NOT YET')">Discord</a></li>
-                <li class="navbar_li"><a class="navbar_a" href="#news">Forum</a></li>
-                <li class="navbar_li"><a class="navbar_a" href="#contact">Contact</a></li>
-                <li class="navbar_li"><a class="navbar_a" href="#about">About</a></li>
+    <nav class="navbar">
+        <!--<div class="navbar-Title" > MnG </div>-->
+        <img class="navbar-logo" src="img/test.png" style="width: 48px; height: 48px;"></<img>
+        <a href="#" class="navbar-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>  
+                <li><a href="https://discord.gg/jHXbBDHYXG"></img>Discord</a></li>
+                <!-- <li><a href="#H">Forum</a></li>-->
+                <!--<li><a href="#">Home</a></li>-->
             </ul>
-        </div>-->
-    </section>
-    <section>
-        <h1 class="Title">Midnight Gaming</h1>
-        <div id="particles-js"> 
-            <script src="src/particles.js"></script>
-            <script src="src/app.js"></script> 
         </div>
-    </section>
-    <section>
-        <div class="Content-1">
-            <a class="Content-1_h1">Was sind wir?</a>
+    </nav>
+
+    <!-- particles.js container --> 
+        <div id="particles-js"></div>
+        <h1 class="Title">Midnight Gaming</h1>
+        <h2 class="SubTitle"> Quality > Quantity </h2>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <script src="src/particles.js"></script>
+        <script src="src/app.js"></script> 
+    <!-- particles.js container --> 
+
+
+    <div class="Content-1">
+        <br>
+        <br>
+        <a class="Content-1_h1">Was sind wir?</a>
+        <br>
+        <div class="Content-1_txt">
+            <br>Wir sind eine Community die versucht viele Gamer unter eine Decke zu bringen!</br>
+            <br>Unteranderem stellen wir durch unsere hohe Technische Erfahrung Roleplay</br>
+            <br> Server im beliebtem sandbox Spiel Garry´s Mod zur verfügung</br>
             <br>
-            <div style="text-align: center; color: rgb(199, 199, 199); font-family: 'Lexend'; font-size: 0.9rem; line-height: 0.5rem">
-                <br>Wir sind eine Community die versucht viele Gamer unter eine Decke zu bringen!</br>
-                <br>Unteranderem stellen wir durch unsere hohe Technische Erfahrung Roleplay</br>
-                <br> Server im beliebtem sandbox Spiel Garry´s Mod zur verfügung</br>
-                <br>
-                <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="Content-2">
+            <a class="Content-1_h1">Aufbaustatus</a>
+            <br>
+            <br> 
+            <div class="Content-2"> 
+                <script>
+                    const parent = document.querySelector('.Content-2');
+
+                    Progresses.forEach(data => {
+                        const title = document.createElement("span");
+                        title.className = "progressbarTitle"
+                        title.innerHTML = data.Title
+                        parent.appendChild(title);
+
+                        const element = document.createElement("div");
+                        element.classList.add("progressbar");
+                        element.id = "progressbar"
+                        element.className = "progressbar"
+                        element.style = 
+                        `
+                            width: 20rem;
+                            height: 1.2rem;
+                            margin-bottom: 1.6rem;
+                            margin-left: auto;
+                            margin-right: auto;
+                            border-radius: 20px;
+                            background-color: #110a39;
+                            overflow: hidden;
+                            position: relative;
+                        `
+                        const elementinner = document.createElement("span")
+                        elementinner.setAttribute("data-progress", data.Progress);
+                        element.appendChild(elementinner)
+
+                        parent.appendChild(element);
+                    });
+
+                    $(".progressbar span").each(function () {
+                        $(this).animate(
+                            {
+                                width: $(this).attr("data-progress") + "%",
+                            },
+                            1000
+                        );
+                    });
+                </script>
             </div>
-            <div class="Content-2">
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-            </di>
-    </section>
-</body>
+        </div>
+        <br>
+        <br>
+        <br>
+    </body>
 </html>
+
